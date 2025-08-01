@@ -4,8 +4,7 @@ import dbConnect from "@/lib/db";
 import Forum from "@/models/Forum";
 import cloudinary from "@/lib/cloudinary";
 import jwt from "jsonwebtoken";
-import fs from "fs";
-import path from "path";
+
 
 const JWT_SECRET = process.env.JWT_SECRET || "supersecret";
 

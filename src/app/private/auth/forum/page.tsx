@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Image from "next/image";
 
 type ForumPost = {
   _id: string;
@@ -20,7 +21,7 @@ const ForumPage = () => {
       try {
         const res = await axios.get("/api/auth/forum");
         setData(res.data.data);
-      } catch (err: any) {
+      } catch (err: unknown) {
         console.error(err);
         setError("Failed to load posts");
         setData([]); // show blank if failed
@@ -42,11 +43,16 @@ const ForumPage = () => {
             key={post._id}
             className="bg-white shadow-lg rounded-lg overflow-hidden border"
           >
-            <img
-              src={post.image}
-              alt={post.title}
-              className="w-full h-48 object-cover"
-            />
+            <div className="relative w-full h-48">
+              <Image
+                src={post.image}
+                alt={post.title}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-t-lg"
+                unoptimized // Remove this if you're using Vercel or a custom image loader
+              />
+            </div>
             <div className="p-4">
               <h3 className="text-xl font-semibold">{post.title}</h3>
               <p className="text-gray-600">{post.description}</p>
