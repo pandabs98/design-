@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema<IUser>(
   {
     email: {
       type: String,
-      required: [true, "please enter your Email"],
+      required: [true, "Please enter your email"],
       unique: true,
       trim: true,
     },
@@ -29,7 +29,7 @@ const userSchema = new mongoose.Schema<IUser>(
   { timestamps: true }
 );
 
-// ✅ This is the missing part
+// ✅ Hash password before saving
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();
 
@@ -42,7 +42,6 @@ userSchema.pre("save", async function (next) {
   }
 });
 
-// Password comparison method
 userSchema.methods.comparePassword = async function (
   candidatePassword: string
 ) {
