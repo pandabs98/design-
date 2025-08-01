@@ -37,11 +37,47 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    const userCount = await User.countDocuments();
+
+    // 🔰 Register first user
+    if (userCount === 0) {
+      const newUser = new User({ email, password }); // Password will be hashed
+      const accessToken = generateAccessToken(newUser);
+      const refreshToken = generateRefreshToken(newUser);
+
+      newUser.refreshToken = refreshToken;
+      await newUser.save();
+
+      const res = NextResponse.json(
+        { message: "First user registered and logged in", user: { email } },
+        { status: 201 }
+      );
+
+      res.cookies.set("accessToken", accessToken, {
+        httpOnly: true,
+        secure: true,
+        sameSite: "strict",
+        maxAge: 3 * 24 * 60 * 60,
+        path: "/",
+      });
+
+      res.cookies.set("refreshToken", refreshToken, {
+        httpOnly: true,
+        secure: true,
+        sameSite: "strict",
+        maxAge: 7 * 24 * 60 * 60,
+        path: "/",
+      });
+
+      return res;
+    }
+
+    // 🧠 Normal login
     const user = await User.findOne({ email });
 
     if (!user) {
       return NextResponse.json(
-        { error: "User not found. Please register." },
+        { error: "User not found." },
         { status: 404 }
       );
     }
@@ -83,8 +119,9 @@ export async function POST(req: NextRequest) {
     });
 
     return res;
+
   } catch (error) {
-    console.error("Login error:", error);
+    console.error("Login/Register error:", error);
     return NextResponse.json(
       { error: "Something went wrong." },
       { status: 500 }
