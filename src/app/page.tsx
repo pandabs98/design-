@@ -19,7 +19,7 @@ type ForumPost = {
 };
 
 export default function Home() {
-  const words = ["Secure", "Safe", "Trusted", "Modern"];
+  const words = ["Stilish", "Unique", "Practicle", "Modern"];
   const variants = {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0 },
@@ -63,7 +63,7 @@ export default function Home() {
               animate="visible"
               transition={{ delay: 1 }}
             >
-              Hi I&apos;m Riya
+              Hi I&apos;m Ahsaas
 
             </motion.h1>
             <motion.p
@@ -73,7 +73,7 @@ export default function Home() {
               animate="visible"
               transition={{ delay: 1.2 }}
             >
-              A Developer <br /> Dedicated to Crafting
+              A Artist <br /> Dedicated to Raw Design
             </motion.p>
             <motion.div
               variants={variants}
@@ -93,7 +93,7 @@ export default function Home() {
               animate="visible"
               transition={{ delay: 1.8 }}
             >
-              Web Solutions
+              Painting Solutions
             </motion.p>
           </div>
         </div>

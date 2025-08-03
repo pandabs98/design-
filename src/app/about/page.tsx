@@ -13,7 +13,7 @@ const AboutPage = () => {
                         <span className="ml-4 h-1 w-24 rounded-full"></span>
                     </h1>
                     <p className="text-lg sm:text-l leading-relaxed max-w-3xl">
-                        Hi, I&apos;m Riya Riya, a passionate and detail-oriented Full Stack Developer with a relentless drive for solving problems and building efficient, modern web applications.
+                        Hi, I&apos;m Ahsaas Ahsaas, a passionate and detail-oriented Full Stack Developer with a relentless drive for solving problems and building efficient, modern web applications.
 
                         Coding isn&apos;t just my job — it&apos;s my core passion. I dedicate my time to improving my skills, understanding systems deeply, and creating powerful applications that serve real-world needs. Whether it&apos;s writing scalable backend logic, crafting seamless user interfaces, or debugging complex issues, I thrive in the process of turning ideas into working software.
 

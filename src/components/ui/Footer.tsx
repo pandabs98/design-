@@ -15,19 +15,19 @@ const Footer = () => {
         >
           <div className="">
           </div>
-          <span>Riya</span>
+          <span>Ahsaas</span>
         </Link>
 
         {/* Copyright */}
         <p className="text-sm mt-4 sm:mt-0">
-          © 2025 Riya —{' '}
+          © 2025 BhagyaShwariya —{' '}
           <a
-            href="https://twitter.com/knyttneve"
+            href="https://x.com/"
             className="hover:text-primary"
             target="_blank"
             rel="noopener noreferrer"
           >
-            @Riya
+            @Panda
           </a>
         </p>
 

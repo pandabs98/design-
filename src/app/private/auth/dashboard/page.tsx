@@ -6,6 +6,7 @@ import { Pencil, Trash, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import Create from "@/components/dialogs/Create";
 
 // Forum project type
 type ForumProject = {
@@ -120,6 +121,9 @@ const DashboardPage = () => {
           <LogOut className="h-4 w-4" />
           Logout
         </Button>
+      </div>
+      <div className="items-center ">
+        <Create/>
       </div>
 
       <h1 className="text-3xl font-bold mb-6 text-center">All Projects</h1>

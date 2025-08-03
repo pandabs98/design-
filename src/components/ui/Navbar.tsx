@@ -44,7 +44,7 @@ const Navbar = () => {
             href="/"
             className="text-xl font-bold text-foreground hover:text-primary transition-colors hover:underline hove: scale-105"
           >
-            Riya
+            Ahsaas
           </Link>
 
           {/* Desktop Nav */}
