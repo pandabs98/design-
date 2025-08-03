@@ -30,21 +30,21 @@ export default function Home() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-  setMounted(true);
-  const fetchData = async () => {
-    try {
-      const response = await axios.get("/api/auth/forum");
-      setData(response.data.data);
-    } catch (error: unknown) {
-      if (error instanceof Error) {
-        setError(error.message);
-      } else {
-        setError("Failed to fetch data");
+    setMounted(true);
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("/api/auth/forum");
+        setData(response.data.data);
+      } catch (error: unknown) {
+        if (error instanceof Error) {
+          setError(error.message);
+        } else {
+          setError("Failed to fetch data");
+        }
       }
-    }
-  };
-  fetchData();
-}, []);
+    };
+    fetchData();
+  }, []);
 
   if (!mounted) return null;
   if (error) return <div className="text-center text-red-500">{error}</div>;
@@ -53,45 +53,47 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section id="home" className="pt-32 pb-20 bg-background">
+      <section id="home" className="pt-28 pb-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex-col hidden md:flex space-y-6">
+          <div className="flex flex-col space-y-6 text-center md:text-left">
             <motion.h1
-              className="text-4xl font-bold text-foreground"
+              className="text-3xl sm:text-4xl font-bold text-foreground"
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.8 }}
+            >
+              Hi, I&apos;m Ahsaas
+            </motion.h1>
+
+            <motion.p
+              className="text-2xl sm:text-4xl font-semibold text-muted-foreground"
               variants={variants}
               initial="hidden"
               animate="visible"
               transition={{ delay: 1 }}
             >
-              Hi I&apos;m Ahsaas
-
-            </motion.h1>
-            <motion.p
-              className="text-5xl font-semibold text-muted-foreground"
-              variants={variants}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 1.2 }}
-            >
-              A Artist <br /> Dedicated to Raw Design
+              A Artist <br className="sm:hidden" /> Dedicated to Raw Design
             </motion.p>
+
             <motion.div
               variants={variants}
               initial="hidden"
               animate="visible"
-              transition={{ delay: 1.5 }}
+              transition={{ delay: 1.3 }}
             >
               <FlipWords
                 words={words}
-                className="text-8xl font-black text-primary"
+                className="text-5xl sm:text-7xl font-black text-primary"
               />
             </motion.div>
+
             <motion.p
-              className="text-4xl font-medium text-muted-foreground"
+              className="text-2xl sm:text-4xl font-medium text-muted-foreground"
               variants={variants}
               initial="hidden"
               animate="visible"
-              transition={{ delay: 1.8 }}
+              transition={{ delay: 1.6 }}
             >
               Painting Solutions
             </motion.p>
