@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <footer className="fixed bottom-0 inset-x-0 z-40 border-t border-border bg-background text-muted-foreground">
+    <footer className="w-full border-t border-border bg-background text-muted-foreground">
       <div className="mx-auto max-w-7xl px-4 py-6 flex flex-col sm:flex-row items-center justify-between">
         
         {/* Logo Centered on Mobile */}
@@ -13,50 +13,27 @@ const Footer = () => {
           href="/"
           className="flex items-center gap-2 text-lg font-semibold text-foreground hover:text-primary"
         >
-          <div className="">
-          </div>
           <span>Ahsaas</span>
         </Link>
 
-        {/* Copyright */}
-        {/* <p className="text-sm mt-4 sm:mt-0">
-          © 2025 BhagyaShwariya —{' '}
-          <a
-            href="https://x.com/"
-            className="hover:text-primary"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @Panda
-          </a>
-        </p> */}
-
         {/* Social Icons */}
         <div className="flex gap-4 mt-4 sm:mt-0">
-          {[
-            {
-              href: 'https://telegram.me/@DeamonxHACKS',
-              icon: (
-                <svg
-                  fill="currentColor"
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-                </svg>
-              ),
-            },
-          ].map((item, i) => (
-            <a
-              key={i}
-              href={item.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
+          <a
+            href="https://t.me/DeamonxHACKS"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary transition-colors"
+          >
+            {/* Telegram Logo */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-5 h-5"
+              viewBox="0 0 24 24"
+              fill="currentColor"
             >
-              {item.icon}
-            </a>
-          ))}
+              <path d="M12 0C5.372 0 0 5.372 0 12c0 6.627 5.372 12 12 12s12-5.373 12-12C24 5.372 18.627 0 12 0zm5.157 7.684l-1.64 7.735c-.124.55-.454.685-.92.426l-2.547-1.88-1.23 1.186c-.136.135-.25.25-.513.25l.184-2.606 4.745-4.29c.207-.184-.046-.288-.322-.105l-5.857 3.682-2.518-.787c-.55-.17-.56-.55.114-.813l9.83-3.792c.457-.17.857.105.71.787z" />
+            </svg>
+          </a>
         </div>
       </div>
     </footer>
