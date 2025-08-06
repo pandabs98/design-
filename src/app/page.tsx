@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { FlipWords } from "@/components/ui/Flipwords";
 
 import AboutPage from "./about/page";
-import SkillPage from "./skill/page";
+// import SkillPage from "./skill/page";
 import WorkPage from "./work/page";
 import ContactPage from "./contact/page";
 
@@ -109,11 +109,11 @@ export default function Home() {
       </section>
 
       {/* Skill Section */}
-      <section id="skill" className="pt-24 pb-20 bg-background">
+      {/* <section id="skill" className="pt-24 pb-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SkillPage />
         </div>
-      </section>
+      </section> */}
 
       {/* Work Section */}
       <section id="work" className="pt-24 pb-20 bg-background">

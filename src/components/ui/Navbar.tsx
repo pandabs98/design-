@@ -10,8 +10,8 @@ import { ModeToggle } from './toggle-button'
 function Navigation({ onLinkClick }: { onLinkClick?: () => void }) {
   const links = [
     { href: '#', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#skill', label: 'Skill' },
+    // { href: '#about', label: 'About' },
+    // { href: '#skill', label: 'Skill' },
     { href: '#work', label: 'Work' },
     { href: '#contact', label: 'Contact' },
   ]
