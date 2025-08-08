@@ -17,7 +17,7 @@ const AboutPage = () => {
                         <br /><br />
                         Beyond the field, Ahsaas has a strong interest in technology, particularly in coding and ethical hacking. He enjoys solving complex problems, exploring new tools, and constantly pushes himself to stay ahead in the digital world.
                         <br /><br />
-                        A lifelong learner at heart, Ahsaas is always eager to acquire new skills, whether it's in tech, sports, or everyday life. His enthusiasm for learning, combined with his playful nature, makes him both a fun companion and a driven individual.
+                        A lifelong learner at heart, Ahsaas is always eager to acquire new skills, whether it&apos;s in tech, sports, or everyday life. His enthusiasm for learning, combined with his playful nature, makes him both a fun companion and a driven individual.
                     </p>
                 </section>
             </div>
